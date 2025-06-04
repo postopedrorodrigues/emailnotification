@@ -1,20 +1,18 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.js",
-      "methods": ["GET", "POST", "OPTIONS"]
-    }
-  ],
-  "env": {
-    "EMAIL": "@your-email-env-var",
-    "SENHA": "@your-password-env-var"
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/server.js",
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["prisma/**"] 
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "api/server.js"
+      }
+    ]
   }
-}
