@@ -2,6 +2,8 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+# teste
+v1s.js
 
 # Arquivos de ambiente
 .env
