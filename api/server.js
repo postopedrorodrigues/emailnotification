@@ -11,4 +11,5 @@ app.get('/', (req, res) => {
   res.json({ message: 'Servidor está rodando!' });
 });
 
-module.exports.handler = serverless(app);
+// ✅ Exporta corretamente para Vercel
+module.exports = serverless(app);
