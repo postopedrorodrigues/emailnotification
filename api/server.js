@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Servidor está rodando na Vercel!' });
+  res.json({ message: 'Servidor está rodando!' });
 });
 
 module.exports.handler = serverless(app);
