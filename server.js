@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Servidor rodando!' });
+});
 app.post('/api/notificar-acesso', async (req, res) => {
   try {
     // Dados básicos do visitante
